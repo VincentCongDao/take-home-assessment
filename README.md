@@ -9,12 +9,13 @@ If you want to see the preview, visit [Preview](https://take-home-assessment-tau
 ## Tech Stack
 
 **Client**: React.js
+
 **Style**: CSS
+
 **Icon**: Material Icon
 
 ## Description
-This project is creating by React.js with traditional CSS. 
-If you want to run this project on your local machine, please run
+This project, created using React.js and traditional CSS, allows users to interact with a collection of recipes through a dynamic filter system without the need for form submission. To run this project on your local machine, use the following commands:
 ~~~bash
 npm install
 npm start
