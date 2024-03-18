@@ -457,4 +457,9 @@
             margin-top: 5px;
             gap: 5px;
       }
+
+      .info-wrapper {
+            margin-left: auto;
+            margin-right: auto;
+      }
 }

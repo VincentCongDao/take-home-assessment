@@ -24,12 +24,14 @@ const Filter = ({
   toggleFilterVisibility,
   isFilterVisible,
 }) => {
+  // input component will update the search state by mealtype or tags selection.
   const handleTagChange = (tag) => {
     setSearchTag(tag);
   };
   const handleMealTypeChange = (type) => {
     setSearchMealType(type);
   };
+  // Clear the filter and reset the DOM
   const resetFilters = () => {
     setSearchTerm("");
     setSearchTag("");

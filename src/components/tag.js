@@ -1,4 +1,3 @@
-// Tag.js
 const Tag = ({ text, onRemove }) => {
   return (
     <div className="tag">
