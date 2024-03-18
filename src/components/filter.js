@@ -39,6 +39,9 @@ const Filter = ({
     setSelectedTags([]);
     setSelectedMealTypes([]);
   };
+
+  // If the tags or mealtypes have duplication will remove
+  // Shows only the one new object into the search
   const allTags = recipes
     ? [...new Set(recipes.flatMap((recipe) => recipe.tags || []))]
     : [];

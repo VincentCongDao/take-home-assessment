@@ -15,6 +15,7 @@ function App() {
   const [totalTimeFilter, setTotalTimeFilter] = useState("All");
   useEffect(() => {
     async function fetchRecipes() {
+      //     Fetching the API
       const response = await fetch("https://dummyjson.com/recipes");
       const data = await response.json();
       setRecipes(data.recipes);
@@ -22,33 +23,35 @@ function App() {
 
     fetchRecipes();
   }, [selectedTags, selectedMealTypes, totalTimeFilter]);
-  // Function to add a tag to the selectedTags state
+
+  // add tag from the select
   const addTag = (tag) => {
     setSelectedTags((prevTags) => {
       return Array.from(new Set([...prevTags, tag]));
     });
   };
 
-  // Function to remove a tag from the selectedTags state
+  // remove tag from the select
   const removeTag = (tagToRemove) => {
     setSelectedTags((prevTags) =>
       prevTags.filter((tag) => tag !== tagToRemove)
     );
   };
-  // Function to add a tag to the selectedTags state
+  // add meals type from the select
   const addMealType = (tag) => {
     setSelectedMealTypes((prevTags) => {
       return Array.from(new Set([...prevTags, tag]));
     });
   };
 
-  // Function to remove a tag from the selectedTags state
+  // remove meals type from the select
   const removeMealType = (tagToRemove) => {
     setSelectedMealTypes((prevTags) =>
       prevTags.filter((tag) => tag !== tagToRemove)
     );
   };
   const filteredRecipes = recipes.filter((recipe) => {
+    //   All search and results will be in lowercase
     const matchesSearchTerm = recipe.name
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
