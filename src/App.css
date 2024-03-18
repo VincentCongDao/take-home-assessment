@@ -439,6 +439,11 @@
       .top-filter>svg:nth-child(2) {
             display: block;
       }
+
+      .info-wrapper {
+            margin-left: auto;
+            margin-right: auto;
+      }
 }
 
 /* Mobile */
@@ -456,10 +461,5 @@
       .recipe-cooking-container {
             margin-top: 5px;
             gap: 5px;
-      }
-
-      .info-wrapper {
-            margin-left: auto;
-            margin-right: auto;
       }
 }
